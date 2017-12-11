@@ -13,3 +13,13 @@ This is a simple hackernews clone put together to try out ember.
 ## Lessons learned
  - css is not really that difficult, flexbox is easier to work with than bootstrap
  - ember inspector is life
+
+## Known issues
+When routing to an item the page renders instantly before the model has finished resolving.
+Refreshing the page loads the model properly. I don't exactly know why this is happening, but
+it's probably because the way I've built the model in the items route is fragile. I'm returning
+a bare json object, mutated in a block with some async/await statements, which I thought compiled 
+down to promises anyways but perhaps not. This is a very experience breaking bug though!
+
+Anyways, as soon as I have time I'm going research models/lifecyclehooks/emberdata in more depth
+and see what comes out of that.
