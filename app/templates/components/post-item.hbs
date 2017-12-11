@@ -1,0 +1,15 @@
+<div class="post-item-index">{{index}}</div>
+<div class="post-item-main">
+  <a class="post-item-title" href={{post.url}}>{{post.title}}</a>
+  {{#if post.url}}
+    <span class="post-item-domain">({{format-domain post.url}})</span>
+  {{/if}}
+  <div class="post-item-subtext">
+    {{post.score}} points by {{post.by}} {{time-since post.time}}
+  </div>
+</div>
+<div class="post-item-comments">
+  {{#link-to "item" post}}
+    {{post.descendants}}
+  {{/link-to}}
+</div>

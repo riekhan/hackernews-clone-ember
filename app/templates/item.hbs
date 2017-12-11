@@ -1,0 +1,22 @@
+<div class="item-container">
+  <div class="item-header">
+    <div>
+      <a class="item-title" href={{model.url}}>{{model.title}}</a>
+      {{#if model.url}}
+        <span class="item-domain">({{format-domain model.url}})</span>
+      {{/if}}
+    </div>
+    <div class="item-subtext">
+      {{model.score}} points by {{model.by}} {{time-since model.time}}
+    </div>
+    <p class="item-text">{{{model.text}}}</p>
+  </div>
+
+  <div class="item-comment-container">
+    {{#each model.comments key="id" as |comment|}}
+      {{recursive-comment comment=comment}}
+    {{else}}
+      <p class="item-comment">This story doesn't have any comments yet.</p>
+    {{/each}}
+  </div>
+</div>

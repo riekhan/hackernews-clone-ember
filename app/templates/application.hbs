@@ -1,5 +1,11 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<div class=main-container>
+  <nav>
+    <div class="nav-bar-links">
+      <div title="Top Posts" class="link">{{#link-to "top"}}top{{/link-to}}</div>
+      <div title="New Posts" class="link">{{#link-to "new"}}new{{/link-to}}</div>
+      <div title="About" class="link">{{#link-to "new"}}about{{/link-to}}</div>
+    </div>
+  </nav>
+  {{outlet}}
+</div>
 
-{{outlet}}

@@ -1,0 +1,10 @@
+<div class="recursive-comment">
+  <div class="item-comment-subtext">{{comment.by}} {{time-since comment.time}}</div>
+  <div class="item-comment">{{{comment.text}}}</div>
+  
+  <div>
+  {{#each comment.comments as |comment|}}
+    {{recursive-comment comment=comment}}
+  {{/each}}
+  </div>
+</div>
