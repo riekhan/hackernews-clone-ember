@@ -1,51 +1,15 @@
 # hackernews-clone-ember
+This is a simple hackernews clone put together to try out ember. 
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+## TODO
+ - pagination for new/top routes
+ - fix hacky api usage
+   - currently calls each comment's child recursively, which is sequential and very slow
+   - stalls on threads with moderate number of comments!
+   - either use ember data or build a better algorithm (something parallel at least)
+ - add routes for about/show/ask/jobs
+ - authentication and submitting comments (if possible, not sure if the api allows that)
 
-## Prerequisites
-
-You will need the following things properly installed on your computer.
-
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with NPM)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
-
-## Installation
-
-* `git clone <repository-url>` this repository
-* `cd hackernews-clone-ember`
-* `npm install`
-
-## Running / Development
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+## Lessons learned
+ - css is not really that difficult, flexbox is easier to work with than bootstrap
+ - ember inspector is life
